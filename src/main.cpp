@@ -1561,14 +1561,14 @@ static int idaapi PluginExtensionCallback( void * /*user_data*/, int event_id, v
 				OutMnem();
 
 				// Output operands
-				if ( cmd.Op1.showed() && cmd.Op1.type != o_void )
+				if ( cmd.Op1.shown() && cmd.Op1.type != o_void )
 				{
 					 out_one_operand( 0 );
 				}
 
-				if ( cmd.Op2.showed() && cmd.Op2.type != o_void )
+				if ( cmd.Op2.shown() && cmd.Op2.type != o_void )
 				{
-					if ( cmd.Op1.showed() )
+					if ( cmd.Op1.shown() )
 					{
 						out_symbol(',');
 						OutChar(' ');
@@ -1576,9 +1576,9 @@ static int idaapi PluginExtensionCallback( void * /*user_data*/, int event_id, v
 					out_one_operand( 1 );
 				}
 				
-				if ( cmd.Op3.showed() && cmd.Op3.type != o_void )
+				if ( cmd.Op3.shown() && cmd.Op3.type != o_void )
 				{
-					if ( cmd.Op1.showed() || cmd.Op2.showed() )
+					if ( cmd.Op1.shown() || cmd.Op2.shown() )
 					{
 						out_symbol(',');
 						OutChar(' ');
@@ -1586,9 +1586,9 @@ static int idaapi PluginExtensionCallback( void * /*user_data*/, int event_id, v
 					out_one_operand( 2 );
 				}
 
-				if ( cmd.Op4.showed() && cmd.Op4.type != o_void )
+				if ( cmd.Op4.shown() && cmd.Op4.type != o_void )
 				{
-					if ( cmd.Op1.showed() || cmd.Op2.showed() || cmd.Op3.showed() )
+					if ( cmd.Op1.shown() || cmd.Op2.shown() || cmd.Op3.shown() )
 					{
 						out_symbol(',');
 						OutChar(' ');
@@ -1596,9 +1596,9 @@ static int idaapi PluginExtensionCallback( void * /*user_data*/, int event_id, v
 					out_one_operand( 3 );
 				}
 
-				if ( cmd.Op5.showed() && cmd.Op5.type != o_void )
+				if ( cmd.Op5.shown() && cmd.Op5.type != o_void )
 				{
-					if ( cmd.Op1.showed() || cmd.Op2.showed() || cmd.Op3.showed() || cmd.Op4.showed() )
+					if ( cmd.Op1.shown() || cmd.Op2.shown() || cmd.Op3.shown() || cmd.Op4.shown() )
 					{
 						out_symbol(',');
 						OutChar(' ');
